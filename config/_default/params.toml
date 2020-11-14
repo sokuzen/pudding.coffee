@@ -1,5 +1,5 @@
 mainSections = ["posts"]
-description = "Eureka is a elegant and powerful theme for Hugo."
+description = "Coffee Pudding has the answer to everything."
 
 repoURL = ""
 # If it is a Github repo, leave blank
@@ -8,16 +8,16 @@ repoEditURL = ""
 dateFormat = ""
 
 # E.g. Person, Organization, LocalBusiness, Project, EducationalOrganization
-siteType = "Person"
-icon = "images/icon.png"
+siteType = "Blog"
+icon = "icon.png"
 publisherName = "Example publisher"
 publisherLogo = ""
 
 [hero]
-  slogan = "We are all in the gutter, but some of us are looking at the stars."
+  slogan = "Expect nothing; And accept everything"
   # Specify the image name in `assets/images/` folder.
-  imgLeft = "images/hero-left.jpg"
-  imgRight = "images/hero-right.jpg"
+  imgLeft = "images/jess-bailey-Et5Du1dc7kk-unsplash.jpg"
+  imgRight = "images/pexels-kaboompics-com-54283.jpg"
 
 [comment]
   # Options: disqus and commento.
