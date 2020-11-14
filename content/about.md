@@ -24,5 +24,8 @@ Websites built with Hugo are extremelly fast, secure and can be deployed anywher
 
 Learn more and contribute on [GitHub](https://github.com/gohugoio).
 
-
+# Acknowledgements
+- https://www.wangchucheng.com/en/authors/wang
+- https://www.pexels.com
+- https://unsplash.com
 

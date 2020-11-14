@@ -14,7 +14,7 @@ publisherName = "Example publisher"
 publisherLogo = ""
 
 [hero]
-  slogan = "Expect nothing; And accept everything"
+  slogan = '"I always wanted to be a part of a team building things that people love" - Chris Wanstrath, Github Co-Founder'
   # Specify the image name in `assets/images/` folder.
   imgLeft = "images/jess-bailey-Et5Du1dc7kk-unsplash.jpg"
   imgRight = "images/pexels-kaboompics-com-54283.jpg"
