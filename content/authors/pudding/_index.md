@@ -34,4 +34,4 @@ Pudding's passions aren't limited to programming and gaming. Pudding also loves 
 
 You may also find Pudding online as sokuzen.
 
-Final note: Pudding likes their coffee black. No sugar.
+Also, Pudding likes their coffee black. No sugar.
