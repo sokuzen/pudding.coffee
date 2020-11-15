@@ -1,7 +1,7 @@
 mainSections = ["posts"]
 description = "Coffee Pudding has the answer to everything."
 
-repoURL = ""
+repoURL = "https://github.com/sokuzen/pudding.coffee"
 # If it is a Github repo, leave blank
 repoEditURL = ""
 
@@ -21,9 +21,11 @@ publisherLogo = ""
 
 [comment]
   # Options: disqus and commento.
+#  platform = "disqus"
   platform = ""
 
   [comment.disqus]
+#    shortname = "coffee-pudding"
     shortname = ""
 
   [comment.commento]

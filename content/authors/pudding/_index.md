@@ -1,8 +1,8 @@
 +++
 # Name
 title = "Pudding"
-role = "Almighty Owner"
-bio = "A sweet dessert"
+role = "Sweet treat of"
+bio = "Can be coffee-flavored at one moment, and then strawberry at another. Plays with video games and IDEs."
 avatar = "avatar.jpg"
 
 [organization]
@@ -17,15 +17,21 @@ avatar = "avatar.jpg"
   icon_pack = "fab"
   url = "https://www.twitter.com/kohi_pudding"
 [[social]]
+  icon = "github"
+  icon_pack = "fab"
+  url = "https://github.com/sokuzen"
+[[social]]
   icon = "envelope"
   icon_pack = "fas"
   url = "mailto:pudding@pudding.coffee"
 +++
 
-# Welcome
-Welcome to Coffee Pudding.
+# Self Introduction
 
-# Acknowledgements
-https://www.wangchucheng.com/
-https://www.freevector.com/
-https://www.pexels.com
+Have you seen a pudding that codes and plays video games? Look no further-- you've found one.
+
+Pudding's passions aren't limited to programming and gaming. Pudding also loves traveling, finding himself at the top of mountains, or swimming deep with the corals.
+
+You may also find Pudding online as sokuzen.
+
+Final note: Pudding likes their coffee black. No sugar.
