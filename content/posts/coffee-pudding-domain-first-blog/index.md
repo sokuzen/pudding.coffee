@@ -3,11 +3,11 @@ title = "Pudding Coffee? Or Coffee Pudding?"
 description = "Is this a question of which is better?"
 toc = true
 authors = "pudding"
-tags = []
-categories = ["tech", "domains", "brand", "static-site"]
+tags = ["technology", "domains", "brand", "static-site", "first", "motivation", "web", "blog"]
+categories = ["tech"]
 series = []
 date =  "2020-11-14T23:53:29+08:00"
-lastmod = "2020-11-14T23:53:29+08:00"
+lastmod = "2020-11-23T00:18:29+08:00"
 featuredImage = ""
 draft = false
 +++

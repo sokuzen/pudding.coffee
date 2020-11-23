@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://www.pudding.coffee"
 title = "Coffee Pudding"
 
 # Comment when installing using Hugo Modules
