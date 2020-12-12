@@ -7,7 +7,7 @@ tags = ["technology", "domains", "brand", "static-site", "first", "motivation", 
 categories = ["tech"]
 series = []
 date =  "2020-11-14T23:53:29+08:00"
-lastmod = "2020-11-23T00:18:29+08:00"
+lastmod = "2020-12-02T13:58:29+08:00"
 featuredImage = ""
 draft = false
 +++
@@ -16,9 +16,11 @@ draft = false
 
 Hey there! Glad you reached this site’s first-ever blog post. Feel free to browse all the posts to date.
 
-Now that the formalities are out of the way… Pudding Coffee, or Coffee Pudding? As you probably noticed, I went for the latter. It really isn’t the question of which is tastier; or what anyone prefers. It’s more of what sounds more pleasant to one’s ears. Coffee, after all, is more known as a flavor and more fitting as an adjective.
+Now that the formalities are out of the way… Pudding Coffee, or Coffee Pudding?
 
-And yes, this is an important question. The site will, after all, bring the name for a long time, if not forever. It’ll be its branding, if one may say.
+As you probably noticed above, I went for the latter (yes I'm talking about the site's name). It really isn’t the question of which is tastier; or what anyone prefers. It’s more of what sounds more pleasant to one’s ears. Coffee, after all, is more known as a flavor and more fitting as an adjective.
+
+And yes, this is an important question. The site will, after all, bring this name for a long time, if not forever. It’ll be its branding, if one may say.
 
 With all that, how is this name relevant to the site?
 
@@ -26,7 +28,7 @@ With all that, how is this name relevant to the site?
 
 # The Domain?
 
-It was [last October 24 when went window-shopping for domains](https://twitter.com/kohi_pudding/status/1319694005257433088). After some time grueling that my favored domain costs too much, I found that pudding.coffee. I thought this is good and cheap. And there, I decided to purchase the domain.
+It was [last October 24 when went window-shopping for domains](https://twitter.com/kohi_pudding/status/1319694005257433088). After some time grueling that my favored domain costs too much, I found pudding.coffee. I thought this is good and cheap. And there, I decided to purchase the domain.
 
 I’d say it’s an impulse buy. I mean, during that time, I still have no idea what to do with the domain. It was only thanks to an ad somewhere (probably YouTube) that made me checking out domains at GoDaddy. 
 

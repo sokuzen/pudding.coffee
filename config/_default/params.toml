@@ -16,8 +16,8 @@ publisherLogo = ""
 [hero]
   slogan = '"I always wanted to be a part of a team building things that people love" - Chris Wanstrath'
   # Specify the image name in `assets/images/` folder.
-  imgLeft = "images/jess-bailey-Et5Du1dc7kk-unsplash.jpg"
-  imgRight = "images/pexels-kaboompics-com-54283.jpg"
+  imgLeft = "images/elena-mozhvilo-R9Tyr_GZovU-unsplash.jpg"
+  imgRight = "images/sahin-sezer-dincer-cg09hKk6rlw-unsplash.jpg"
 
 [comment]
   # Options: disqus and commento.
