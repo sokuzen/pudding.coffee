@@ -2,7 +2,7 @@
 title: "Set-up Entity Framework Core on .NET Core 3.1 Web APIs"
 description: "Utilize EF Core and Migrations to persist your data on an SQL database"
 date: 2020-12-12T19:59:00+08:00
-lastmod: "2020-12-02T13:58:29+08:00"
+lastmod: "2020-12-27T18:40:29+08:00"
 featuredImage: ""
 draft: false
 toc: true
@@ -14,7 +14,7 @@ series: []
 
 Photo by [Chester Alvarez](https://unsplash.com/@chesteralvarez?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/gears?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
-# Intro
+# Introduction
 
 I have recently been dabbling with .NET Core after years of being a Java specialist. And so far I'm liking it.
 
@@ -30,17 +30,17 @@ Let me first describe what made me write this up.
 
 I have an existing Web API that serves hard-coded data. The API is designed in a way that one can switch and persist to another data context easily, the latter of which I wanted to do. And I don't want to make a whole database schema by hand; I want the DB to be based on the models I already defined. I know that's possible in Spring, so I'm sure I can do that too in .NET Core.
 
-And there, I found EF Core and Migrations. These are tools for Persistence and ORM on .NET Core.
+And there, I found EF Core and Migrations.
 
 # Set up
 
 For this tutorial, I'll use SQL Server Development Edition. I also customized the pre-loaded Weather Forecast Controller-- that guy Visual Studio generates when one makes a .NET Core Web API from a template. I'll make this simple so you can easily grasp the concept. Feel free to modify the steps as you go for your case.
 
-This API has a single model class, WeatherForecast, which we will persist in the installed database. There are two REST methods:
+This API has a single model class, `WeatherForecast`, which we plan to persist in the installed database. There are two REST methods:
 - a GET that lists all weather forecasts;
 - and POST that creates one. 
 
-The data is saved in a non-persistent object injected as a singleton dependency. See the [project's master branch on Github](https://github.com/sokuzen/SimpleWeatherForecast) for more info.
+The data currently is saved in a non-persistent object injected as a singleton dependency. See the [project's master branch on Github](https://github.com/sokuzen/SimpleWeatherForecast) for the codes.
 
 Our goal here is to minimize the impact on the already existing classes, simply adding a feature on top of them.
 
@@ -59,15 +59,15 @@ EF Core is the main package we'll be applying. It has to _talk_ to our database,
     <ItemGroup>
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.10" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.10">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
     </ItemGroup>
 
 # 2. Create a class that implements DbContext
 
-The simplest way to create a DB Context is to create a class that implements `Microsoft.EntityFrameworkCore.DbContext`. Define a constructor to accept a `DbContextOptions` object. Then define `DbSet` fields for each model.
+The simplest way to create a DB Context is to create a class that implements `Microsoft.EntityFrameworkCore.DbContext`. Define a constructor to inject a `DbContextOptions` object. Then define `DbSet` fields for each model.
     
     using Microsoft.EntityFrameworkCore;
     using Weather.Models;
@@ -90,7 +90,7 @@ This feature allows us to create our _codes-first_, then create the DB schema ba
 
 *You can skip this step and the next*, but do you want to write the DB schema manually? And tinker on the tables every time you have changed your models?
 
-To install EF Migrations simply run the following command on your command line:
+To install EF Migrations, run the following command on your command line:
     
     dotnet tool install --global dotnet-ef --version 3.1.10
 
@@ -203,10 +203,12 @@ To:
 
     services.AddScoped<IWeatherForecastRepository, DbWeatherForecastRepository>();
 
-And that's it! You should now be able to see the data persisted on the database. Turning off the server will not restart the data.
+And that's it! You should now be able to see the data persisted on the database. Turning off the server will not reset the data.
 
 # Final Notes
 
-Let me reiterate here that when you have changes to the models, you have to re-apply Migrations by running the two commands mentioned in step 4.
+As you can see, we didn't even change anything on the controller class. We simply added an implementation of the existing interface, then switched-out the existing one by injecting the new one to the already existing classes.
 
-You can also see the final project on the [apply-ef-migrations branch](https://github.com/sokuzen/SimpleWeatherForecast/tree/apply-ef-migrations).
+Also, let me reiterate here that when you have changes to the models, you have to re-apply Migrations by running the two commands mentioned in step 4. EF wants to prevent data loss when you update your schema.
+
+You can see the changes we applied on the [apply-ef-migrations branch](https://github.com/sokuzen/SimpleWeatherForecast/tree/apply-ef-migrations) of the same project.
