@@ -7,14 +7,12 @@ tags = ["technology", "quarantine", "boredom", "study", "life", "motivation", "a
 categories = ["tech", "life"]
 series = []
 date =  "2020-11-22T01:10:27+08:00"
-lastmod = "2020-11-26T01:26:27+08:00"
+lastmod = "2020-12-27T01:26:27+08:00"
 featuredImage = "featured.jpg"
-imgCreditTo = "enginakyurt"
-imgCreditToUrl = "https://unsplash.com/@enginakyurt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-imgPlatform = "Unsplash"
-imgPlatformUrl = "https://unsplash.com/s/photos/quarantine-life?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-draft = false
 +++
+
+Photo by [enginakyurt](https://unsplash.com/@enginakyurt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/quarantine-life?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
 # Life would not pause and wait for you.
 
 Let me start with a widely-known quote.
