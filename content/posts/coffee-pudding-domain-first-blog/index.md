@@ -1,7 +1,7 @@
 +++
 title = "Pudding Coffee? Or Coffee Pudding?"
 description = "Is this a question of which is better?"
-toc = true
+toc = false
 authors = "pudding"
 tags = ["technology", "domains", "brand", "static-site", "first", "motivation", "web", "blog"]
 categories = ["tech"]

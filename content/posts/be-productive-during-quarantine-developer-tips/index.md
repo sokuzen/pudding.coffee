@@ -1,7 +1,7 @@
 +++
 title = "How to be Productive during Quarantine - Tips from a Developer"
 description = "I hate list blogs. So read. Kidding aside, rather than following a list I'll make it easy for you to speed-read. Also, these actionable items aren't only for developers, but for many people who want to get busy in general."
-toc = true
+toc = false
 authors = "pudding"
 tags = ["technology", "quarantine", "boredom", "study", "life", "motivation", "application", "web", "internet", "static-site", "blog", "cloud", "unfuck"]
 categories = ["tech", "life"]
@@ -13,7 +13,7 @@ featuredImage = "featured.jpg"
 
 Photo by [enginakyurt](https://unsplash.com/@enginakyurt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/quarantine-life?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
-# Life would not pause and wait for you.
+## Life would not pause and wait for you.
 
 Let me start with a widely-known quote.
 
@@ -25,7 +25,7 @@ But still, reality sucks. Life is not an episode of your favorite series on Netf
 
 Yes, we have our own timelines. However, this is not an excuse to do nothing.
 
-# You would be surprised what boredom can do.
+## You would be surprised what boredom can do.
 
 Or maybe you do not need these positivity shenanigans; Perhaps you are already craving for something to do. After all, the software development industry is [relatively one of the less impacted by the worldwide quarantine](https://jaxenter.com/github-developer-covid-report-171816.html). We remain productive as things outside get wild, thanks to the continuous growth of internet-based solutions.
 
@@ -47,7 +47,7 @@ Still doubting? Let me toss you some ideas you can start with:
 
 Ideas aren't limited to the ones I told you about. Just keep yourself busy with something preferably (not necessarily) productive.
 
-# Feed your brain
+## Feed your brain
 
 **Learn a new skill.** Another obvious thing, I know. But let's keep in mind that the industry we are in is changing rapidly. You never know, what you know today may not be relevant tomorrow. Or the next month.
 
@@ -61,7 +61,7 @@ Stuck with ASP.NET Framework/MVC? Checkout a .NET Core course. Java 1.5 has long
 
 Also, remember to practice what you learn. You can't tell your employer (or future employer) that you *know* one technology. Not only that, practicing lets you commit mistakes. Go get your hands dirty. And this goes back to the previous section.
 
-# Process some papers.
+## Process some papers.
 
 No, I don't mean to get married or get out of the country. **Certify**. Many of us don't know the value of one sheet. 
 
@@ -71,13 +71,13 @@ After all, it isn't easy to prove something another party cannot see. You would 
 
 Sure, this costs money. But it's worth the investment. And make use of your employee benefits in case you have. You may have one you do not know of. Ask your manager.
 
-# Fly high, sky-high.
+## Fly high, sky-high.
 
 Many don't know this (including I back then), but many cloud providers such as Azure, AWS, and Heroku provide free hours/months/credits for new accounts. 
 
 **Sign-up and get hands-on with cloud services!** These skills are not just great to have today, but also this is where you can host the projects you thought of from the previous sections.
 
-# Accept everything; Expect nothing.
+## Accept everything; Expect nothing.
 
 You may be stuck in a rut right now. Not in the mood to get up, scrolling your Facebook/Twitter feed endlessly. Or sleeping away the day, not looking forward to anything.
 

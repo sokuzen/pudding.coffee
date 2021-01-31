@@ -1,20 +1,19 @@
----
-title: "Set-up Entity Framework Core on .NET Core 3.1 Web APIs"
-description: "Utilize EF Core and Migrations to persist your data on an SQL database"
-date: 2020-12-12T19:59:00+08:00
-lastmod: "2020-12-27T18:40:29+08:00"
-featuredImage: ""
-draft: false
-toc: true
-authors: "pudding"
-tags: ["csharp", "netcore", "rest", "web", "api", "entityframework", "migrations", "database", "persistence", "sql", "orm", "thanksOOP"]
-categories: ["tech"]
-series: []
----
++++
+title = "Set-up Entity Framework Core on .NET Core 3.1 Web APIs"
+description = "Utilize EF Core and Migrations to persist your data on an SQL database"
+date = "2020-12-12T19:59:00+08:00"
+lastmod = "2020-01-09T18:40:29+08:00"
+featuredImage = "featured.jpg"
+toc = true
+authors = "pudding"
+tags = ["csharp", "netcore", "rest", "web", "api", "entityframework", "migrations", "database", "persistence", "sql", "orm", "thanksOOP"]
+categories = ["tech", "guide"]
+series = []
++++
 
 Photo by [Chester Alvarez](https://unsplash.com/@chesteralvarez?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/gears?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
-# Introduction
+## Introduction
 
 I have recently been dabbling with .NET Core after years of being a Java specialist. And so far I'm liking it.
 
@@ -24,15 +23,15 @@ It took my time-- a whole weekend-- to find references and make it work. I don't
 
 Either way here's a post for people who will experience (or are experiencing) the same thing, so they won't need to spend the same time I did.
 
-# Code-First
+## Code-First
 
 Let me first describe what made me write this up. 
 
-I have an existing Web API that serves hard-coded data. The API is designed in a way that one can switch and persist to another data context easily, the latter of which I wanted to do. And I don't want to make a whole database schema by hand; I want the DB to be based on the models I already defined. I know that's possible in Spring, so I'm sure I can do that too in .NET Core.
+I have an existing Web API that serves non-persistent data. The API is designed in a way that one can switch and persist to another data context easily, the latter of which I wanted to do. And I don't want to make a whole database schema by hand; I want the DB to be based on the models I already defined. I know that's possible in Spring, so I'm sure I can do that too in .NET Core.
 
 And there, I found EF Core and Migrations.
 
-# Set up
+## Set-up
 
 For this tutorial, I'll use SQL Server Development Edition. I also customized the pre-loaded Weather Forecast Controller-- that guy Visual Studio generates when one makes a .NET Core Web API from a template. I'll make this simple so you can easily grasp the concept. Feel free to modify the steps as you go for your case.
 
@@ -46,7 +45,7 @@ Our goal here is to minimize the impact on the already existing classes, simply 
 
 You can test it by running POST and GET curls. Or Postman, whichever you prefer.
 
-# 1. Install Nuget Packages
+## 1. Install Nuget Packages
 
 FIrst off is to install the necessary Nuget packages. Install the following on the solution, whether via command line or via Visual Studio:
     
@@ -65,7 +64,7 @@ EF Core is the main package we'll be applying. It has to _talk_ to our database,
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
     </ItemGroup>
 
-# 2. Create a class that implements DbContext
+## 2. Create a class that implements DbContext
 
 The simplest way to create a DB Context is to create a class that implements `Microsoft.EntityFrameworkCore.DbContext`. Define a constructor to inject a `DbContextOptions` object. Then define `DbSet` fields for each model.
     
@@ -84,19 +83,26 @@ The simplest way to create a DB Context is to create a class that implements `Mi
         }
     }
 
-# 3. Install Entity Framework Migrations v3.1.10
+Also, I had to add an annotated ID property to the WeatherForecast class. *EF is throwing up when a model lacks a primary key*. [There are probably other ways to do this](https://stackoverflow.com/questions/15381233/can-we-have-table-without-primary-key-in-entity-framework/15381324), I just opted for the easier one.
+    
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public int Id { get; set; }
+
+
+## 3. Install Entity Framework Migrations v3.1.10
 
 This feature allows us to create our _codes-first_, then create the DB schema based on our defined models and DB Context.
 
 *You can skip this step and the next*, but do you want to write the DB schema manually? And tinker on the tables every time you have changed your models?
 
-To install EF Migrations, run the following command on your command line:
+Up to you, but here to install EF Migrations, run the following command on your command line:
     
     dotnet tool install --global dotnet-ef --version 3.1.10
 
-It's probably obvious that this simply installs dotnet-ef on the global scope. Also using version 3.1.10.
+This simply installs dotnet-ef on the global scope. Also using version 3.1.10.
 
-# 4. Apply Migrations
+## 4. Apply Migrations
 
 To apply Migrations to our DbContext, first, we have to create a class that implements `IDesignTimeDbContextFactory`. EF Core looks into the class that implements the said interface, referencing the DbContext class we made earlier.
 
@@ -152,7 +158,10 @@ At this point, you should now see a new table-- `Forecast`-- on your defined DB.
 
 Note that in case you have changed the models, i.e. you end up adding another model or field, run the above commands again with a different name.
 
-# 5. Create a new service implementation
+    dotnet ef migrations add SomeColumnAdded
+    dotnet ef database update
+
+## 5. Create a new service implementation
 
 By SOLID principle, we would rather add classes rather than change those that already exist. So we'll make a new implementation of `IWeatherForecastRepository` and inject the DbContext we made earlier.
 
@@ -184,7 +193,7 @@ By SOLID principle, we would rather add classes rather than change those that al
     }
 
 
-# 6. Update the API to utilize the new service implementation
+## 6. Update the API to utilize the new service implementation
 
 Simply configure the startup class to use the DbContext and the repository we just made. Replace:
 
@@ -205,9 +214,11 @@ To:
 
 And that's it! You should now be able to see the data persisted on the database. Turning off the server will not reset the data.
 
-# Final Notes
+## Final Notes
 
-As you can see, we didn't even change anything on the controller class. We simply added an implementation of the existing interface, then switched-out the existing one by injecting the new one to the already existing classes.
+As seen, we didn't even change anything on the controller class. I had to add an ID to the model though, I hope that's within the rules :wink:. 
+
+But ultimately, we simply added an implementation of the existing interface, then switched-out the existing one by injecting the new one to the already existing classes.
 
 Also, let me reiterate here that when you have changes to the models, you have to re-apply Migrations by running the two commands mentioned in step 4. EF wants to prevent data loss when you update your schema.
 
