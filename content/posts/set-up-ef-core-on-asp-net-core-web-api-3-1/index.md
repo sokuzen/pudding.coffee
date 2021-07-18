@@ -1,8 +1,8 @@
 +++
-title = "Set-up Entity Framework Core on .NET Core 3.1 Web APIs"
+title = "Apply Entity Framework on ASP.NET Core 3.1 Web APIs"
 description = "Utilize EF Core and Migrations to persist your data on an SQL database"
 date = "2020-12-12T19:59:00+08:00"
-lastmod = "2020-01-09T18:40:29+08:00"
+lastmod = "2021-04-11T11:11:29+08:00"
 featuredImage = "featured.jpg"
 toc = true
 authors = "pudding"
