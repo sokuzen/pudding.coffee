@@ -28,9 +28,9 @@ avatar = "avatar.jpg"
 
 # Self Introduction
 
-Have you seen a pudding that codes and plays video games? Look no further-- you've found one.
+Have you seen a pudding that codes and plays video games?
 
-Pudding's passions aren't limited to programming and gaming. Pudding also loves traveling, finding himself at the top of mountains, or swimming deep with the corals.
+Pudding's passions aren't limited to programming and gaming. Pudding also loves traveling-- finding themself at the top of mountains, or swimming deep with the corals.
 
 You may also find Pudding online as sokuzen.
 
